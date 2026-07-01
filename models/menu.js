@@ -29,6 +29,6 @@ const menuItemSchema = new mongoose.Schema({
 
     }
 })
-
+//sumit
 const Menuitem = mongoose.model('Menuitem', menuItemSchema);
 module.exports = Menuitem;
