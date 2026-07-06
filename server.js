@@ -85,10 +85,10 @@ app.get('/menu',async(req, res)=>{
     res.status(500).json({error: 'Internal server error'})
   }
 })
-const personroute = require('./router/personroute');
+const personroute = require('./router/personRoute');
 app.use('/person', personroute);
 
-const menuitemroute = require('./router/menuitemroutes');
+const menuitemroute = require('./router/menuitemRoutes');
 app.use('/menu', menuitemroute);
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`)
