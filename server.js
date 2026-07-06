@@ -5,7 +5,10 @@ const db = require('./db')
 const Person = require('./models/person');
 const Menuitem = require('./models/menu');
 const bodyParser = require('body-parser');
+require('dotenv').config();
 app.use(bodyParser.json());
+const PORT = process.env.PORT || 3000;
+
 
 app.get('/', (req, res) => {
   res.send('welcome to my class')
@@ -87,6 +90,6 @@ app.use('/person', personroute);
 
 const menuitemroute = require('./router/menuitemroutes');
 app.use('/menu', menuitemroute);
-app.listen(3000, () => {
-  console.log('Server is running on http://localhost:3000')
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`)
 })
