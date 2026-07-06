@@ -85,7 +85,7 @@ app.get('/menu',async(req, res)=>{
     res.status(500).json({error: 'Internal server error'})
   }
 })
-const personroute = require('./router/personRoute');
+const personroute = require('./router/personroute');
 app.use('/person', personroute);
 
 const menuitemroute = require('./router/menuitemRoutes');
