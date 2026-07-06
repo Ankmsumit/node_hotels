@@ -88,7 +88,7 @@ app.get('/menu',async(req, res)=>{
 const personroute = require('./router/personroute');
 app.use('/person', personroute);
 
-const menuitemroute = require('./router/menuitemRoutes');
+const Menuitemroute = require('./router/menuitemRoutes');
 app.use('/menu', menuitemroute);
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`)
